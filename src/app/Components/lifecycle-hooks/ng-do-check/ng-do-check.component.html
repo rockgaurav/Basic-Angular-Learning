@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="col-md-12 text-center mt-5">
+        <div class="card">
+            <div class="card-header">
+                ngDoCheck
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">What is an ngDoCheck?</h5>
+                <p class="card-text">ngDoCheck is triggered after the content (ng-content) has been projected into view. It is called only once after the first ngDoCheck.</p>
+                <p class="card-text"><b>Use:</b> 1. When using content projection (ng-content).</p>
+                <p class="card-text"> 2. Data bind with Either Event or User action.</p>
+                <hr>
+                <p class="card-body"><b>Real Scenario: </b> It detect complex object changes which not detected by
+                    ngOnChanges() means deep check.</p>
+                <hr>
+                <b>Not Use ngDoCheck:</b>
+                <ol>
+                    <li>Angular will update but not showing change value.</li>
+                    <li>Not able to run custom logic.</li>
+                </ol>
+                <!-- <a class="btn btn-primary" (click)="ngOnInit()" >ngOnInit Code</a> -->
+                <button type="button" class="btn btn-lg btn-danger button" placement="top" ngbPopover="ngDoCheck() {console.log('Change detection ho raha hai');}; " popoverTitle="Example of ngDoCheck">
+                    ngDoCheck Code</button>
+            </div>
+        </div>
+    </div>
+</div>

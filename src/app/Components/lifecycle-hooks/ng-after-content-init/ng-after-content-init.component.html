@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="col-md-12 text-center mt-5">
+        <div class="card">
+            <div class="card-header">
+                ngAfterContentInit
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">What is an ngAfterContentInit?</h5>
+                <p class="card-text">ngAfterContentInit is triggered after the content (ng-content) has been projected into view. It is called only once after the first ngDoCheck.</p>
+                <p class="card-text"><b>Use:</b> 1. When using content projection (ng-content).</p>
+                <p class="card-text"> 2. If working on a projected content (like: DOM access, validation, ya dynamic styling).</p>
+                <hr>
+                <p class="card-body"><b>Real Scenario:  Creating a modal component, where content comes from child component.</b></p>
+                <hr>
+                <b>Not Use ngAfterContentInit:</b>
+                <ol>
+                    <li>Projected content will be visible, but DOM access or manipulation will not working (like @ContentChild, ElementRef or apply function) </li>
+                </ol>
+                <!-- <a class="btn btn-primary" (click)="ngOnInit()" >ngOnInit Code</a> -->
+                <button type="button" class="btn btn-lg btn-danger button" routerLink="/ngAfterParent" placement="top" ngbPopover="ngAfterContentInit() {console.log('Change detection ho raha hai');}; " popoverTitle="Example of ngDoCheck">
+                    ngAfterContentInit Example</button>
+            </div>
+        </div>
+    </div>
+</div>

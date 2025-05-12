@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="col-md-12 text-center mt-5">
+        <div class="card">
+            <div class="card-header">
+                ngOnChanges
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">What is an ngOnChanges?</h5>
+                <p class="card-text">ngOnChanges When @input property change, it's detect. </p>
+                <p class="card-text"><b>Use:</b> Detect the @input changes and fetch new data.</p>
+                <hr>
+                <p class="card-body"><b>Real Scenario: Detect and fetch data when @input property change from parent component.</b></p>
+                <hr>
+                <b>Not Use ngOnChanges:</b><ol><li>Don't know the new value.</li><li>UI will not update.</li><li>Sometime logic will work on old data</li></ol>
+                <!-- <a class="btn btn-primary" (click)="ngOnInit()" >ngOnInit Code</a> -->
+                <button type="button" class="btn btn-lg btn-danger button" routerLink="/parent" placement="top"
+                    ngbPopover="For checking Example click on button; " popoverTitle="Example of ngOnInit">
+                    ngOnChanges Example</button>
+            </div>
+        </div>
+    </div>
+</div>

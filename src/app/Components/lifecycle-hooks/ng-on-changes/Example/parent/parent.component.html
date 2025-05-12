@@ -1,0 +1,8 @@
+<h2>Parent Component</h2>
+<button (click)="changeUserId()">Change User ID</button>
+<p>Current User ID: {{ selectedUserId }}</p>
+
+<hr>
+
+<h2>Child Component</h2>
+<app-child [userId]="selectedUserId"></app-child>
