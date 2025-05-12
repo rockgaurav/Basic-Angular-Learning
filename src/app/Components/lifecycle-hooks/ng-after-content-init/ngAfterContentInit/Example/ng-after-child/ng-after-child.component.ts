@@ -1,15 +1,28 @@
-import { AfterContentInit, Component, ContentChild, ElementRef } from '@angular/core';
+import {
+  AfterContentInit,
+  ChangeDetectorRef,
+  Component,
+  ContentChild,
+  ElementRef,
+} from '@angular/core';
 
 @Component({
   selector: 'app-ng-after-child',
   templateUrl: './ng-after-child.component.html',
-  styleUrls: ['./ng-after-child.component.css']
+  styleUrls: ['./ng-after-child.component.css'],
 })
 export class NgAfterChildComponent implements AfterContentInit {
+  
+@ContentChild('projectedContent') content!: ElementRef;
 
-  @ContentChild('projectedContent') content!: ElementRef;
+  constructor(private cdr: ChangeDetectorRef) {}  // ChangeDetectorRef is injected to manually trigger change detection
 
   ngAfterContentInit() {
-    console.log('📦 Projected content initialized:', this.content.nativeElement.textContent);
+    if (this.content) {
+      console.log('📦 Projected content initialized:', this.content.nativeElement.textContent);
+      this.cdr.detectChanges(); // Trigger change detection
+    } else {
+      console.error('❌ Projected content not found!');
+    }
   }
-}  
+}

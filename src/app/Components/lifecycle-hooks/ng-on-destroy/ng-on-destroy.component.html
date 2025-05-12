@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="col-md-12 text-center mt-5">
+        <div class="card">
+            <div class="card-header">
+                ngOnDestroy
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">What is an ngOnDestroy?</h5>
+                <p class="card-text">ngOnDestroy calls before component destroy. </p>
+                <p class="card-text"><b>Use:</b> 1. Use to Unsubscribe from Observables, detach event handlers, or clean up resources to prevent memory leaks.</p>
+                <p>2. API subscription unsubscribe</p>
+                <p>3. Remove event listener or memory.</p>
+                <p>4.  If you are not using any API or event listener, then no need to use.</p>
+                <hr>
+                <p class="card-body"><b>Real Scenario: A timmer is running in component and must to close while page change.</b></p>
+                <hr>
+                <b>Not Use ngOnDestroy:</b>
+                <ol>
+                    <li>1. Memory leak is possible and app also get slow.</li>
+                    <li>2. Sometime unwanted behaviour also show like  (old data show, console errors).</li>
+                    <li>3. Intervals, subscriptions ya event listeners continue run either component destoryed.</li>
+
+                </ol>
+                <!-- <a class="btn btn-primary" (click)="ngOnInit()" >ngOnInit Code</a> -->
+                <button type="button" class="btn btn-lg btn-danger button" placement="top"
+                    ngbPopover="ngOnDestroy() {clearInterval(this.myInterval);}" 
+                    popoverTitle="Example of ngOnDestroy">
+                    ngOnDestroy Code</button>
+            </div>
+        </div>
+    </div>
+</div>

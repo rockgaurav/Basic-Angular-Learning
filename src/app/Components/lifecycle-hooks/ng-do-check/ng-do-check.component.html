@@ -7,7 +7,7 @@
             <div class="card-body">
                 <h5 class="card-title">What is an ngDoCheck?</h5>
                 <p class="card-text">ngDoCheck is triggered after the content (ng-content) has been projected into view. It is called only once after the first ngDoCheck.</p>
-                <p class="card-text"><b>Use:</b> 1. When using content projection (ng-content).</p>
+                <p class="card-text"><b>Use:</b> 1. We want to manually detect changes in a normal object, because ngOnChanges() won’t detect internal object mutations.</p>
                 <p class="card-text"> 2. Data bind with Either Event or User action.</p>
                 <hr>
                 <p class="card-body"><b>Real Scenario: </b> It detect complex object changes which not detected by

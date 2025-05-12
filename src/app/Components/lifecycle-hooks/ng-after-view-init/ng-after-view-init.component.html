@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="col-md-12 text-center mt-5">
+        <div class="card">
+            <div class="card-header">
+                ngAfterViewInit
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">What is an ngAfterViewInit?</h5>
+                <p class="card-text">ngAfterViewInit is called when the component's template successfully rendered in
+                    DOM — including the child components and @ViewChild elements.</p>
+                <p class="card-text"><b>Use:</b> 1. For Auto Scroll.</p>
+                <p class="card-text"> 2. Required animation after page rendered.</p>
+                <p class="card-text"> 3. Want to check DOM size.</p>
+                <p class="card-text"> 4. Use ngAfterViewInit() for safe DOM access tasks like focusing inputs,
+                    initializing plugins, measuring elements, or using child components.</p>
+                <hr>
+                <p class="card-body"><b>Real Scenario: </b> It focus input box automatically while page loading.</p>
+                <hr>
+                <b>Not Use ngAfterViewInit:</b>
+                <ol>
+                    <li>If you try to manipulate the DOM using @ViewChild in ngOnInit(), it may result in an error or
+                        undefined because the view/template hasn't been fully rendered yet .</li>
+                </ol>
+                    <!-- <a class="btn btn-primary" (click)="ngOnInit()" >ngOnInit Code</a> -->
+                    <button type="button" class="btn btn-lg btn-danger button" placement="top"
+                        ngbPopover="@ViewChild('inputBox') inputBox!: ElementRef;---- ngAfterViewInit() {this.inputBox.nativeElement.focus();} "
+                        popoverTitle="Example of ngAfterViewInit">
+                        ngAfterViewInit Code
+                    </button>
+            </div>
+        </div>
+    </div>
+</div>

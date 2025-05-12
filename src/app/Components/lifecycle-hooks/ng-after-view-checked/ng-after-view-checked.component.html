@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="col-md-12 text-center mt-5">
+        <div class="card">
+            <div class="card-header">
+                ngAfterViewChecked
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">What is an ngAfterViewChecked?</h5>
+                <p class="card-text">ngAfterViewChecked when your component's view or child view updates frequently and
+                    you want to run some logic after each update. </p>
+                <p class="card-text"><b>Use:</b> When UI updated continueously like (dynamic values, repeated changes)
+                </p>
+                <hr>
+                <p class="card-body"><b>Real Scenario: Imagine you're building a chat application. When a new message is
+                        added, you want the chat box to automatically scroll to the bottom so the latest message is
+                        visible.</b></p>
+                <hr>
+                <b>Not Use ngAfterViewChecked:</b>
+                <ol>
+                    <li>If UI updates dynamically but you don’t need to run any logic after that, then it's okay — no
+                        problem.</li>
+                    <li>Not necessary to use.</li>
+                </ol>
+                <!-- <a class="btn btn-primary" (click)="ngOnInit()" >ngOnInit Code</a> -->
+                <button type="button" class="btn btn-lg btn-danger button" placement="top"
+                    ngbPopover="@ViewChild('chatBox') chatBox!: ElementRef;----messages = ['Hello', 'How are you?']; ngAfterViewChecked() {this.scrollToBottom();} scrollToBottom() {this.chatBox.nativeElement.scrollTop = this.chatBox.nativeElement.scrollHeight;} " 
+                    popoverTitle="Example of ngAfterViewChecked">
+                    ngAfterViewChecked Code</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -14,6 +14,9 @@ import { NgDoCheckComponent } from './Components/lifecycle-hooks/ng-do-check/ng-
 import { NgAfterContentInitComponent } from './Components/lifecycle-hooks/ng-after-content-init/ng-after-content-init.component';
 import { NgAfterParentComponent } from './Components/lifecycle-hooks/ng-after-content-init/ngAfterContentInit/Example/ng-after-parent/ng-after-parent.component';
 import { NgAfterChildComponent } from './Components/lifecycle-hooks/ng-after-content-init/ngAfterContentInit/Example/ng-after-child/ng-after-child.component';
+import { NgAfterViewInitComponent } from './Components/lifecycle-hooks/ng-after-view-init/ng-after-view-init.component';
+import { NgAfterViewCheckedComponent } from './Components/lifecycle-hooks/ng-after-view-checked/ng-after-view-checked.component';
+import { NgOnDestroyComponent } from './Components/lifecycle-hooks/ng-on-destroy/ng-on-destroy.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,10 @@ import { NgAfterChildComponent } from './Components/lifecycle-hooks/ng-after-con
     NgDoCheckComponent,
     NgAfterContentInitComponent,
     NgAfterParentComponent,
-    NgAfterChildComponent
+    NgAfterChildComponent,
+    NgAfterViewInitComponent,
+    NgAfterViewCheckedComponent,
+    NgOnDestroyComponent
   ],
   imports: [
     BrowserModule,
